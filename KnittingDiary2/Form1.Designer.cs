@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.txtTyönnimi = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtKenelle = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -39,11 +40,23 @@
             this.txtEtsi = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnTallenna = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnPeruuta = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnMuokkaa = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnUusi = new MaterialSkin.Controls.MaterialFlatButton();
+            this.appData = new KnittingDiary2.AppData();
+            this.appDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableTableAdapter = new KnittingDiary2.AppDataTableAdapters.TableTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.työnNimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kenelleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materiaaliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kuvausDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appDataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -188,81 +201,143 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.työnNimiDataGridViewTextBoxColumn,
+            this.kenelleDataGridViewTextBoxColumn,
+            this.materiaaliDataGridViewTextBoxColumn,
+            this.kuvausDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tableBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(45, 263);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(769, 204);
             this.dataGridView1.TabIndex = 11;
             // 
-            // materialFlatButton1
+            // btnTallenna
             // 
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(749, 476);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(81, 36);
-            this.materialFlatButton1.TabIndex = 12;
-            this.materialFlatButton1.Text = "Tallenna";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.btnTallenna.AutoSize = true;
+            this.btnTallenna.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTallenna.Depth = 0;
+            this.btnTallenna.Location = new System.Drawing.Point(749, 476);
+            this.btnTallenna.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTallenna.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTallenna.Name = "btnTallenna";
+            this.btnTallenna.Primary = false;
+            this.btnTallenna.Size = new System.Drawing.Size(81, 36);
+            this.btnTallenna.TabIndex = 12;
+            this.btnTallenna.Text = "Tallenna";
+            this.btnTallenna.UseVisualStyleBackColor = true;
             // 
-            // materialFlatButton2
+            // btnPeruuta
             // 
-            this.materialFlatButton2.AutoSize = true;
-            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Location = new System.Drawing.Point(669, 476);
-            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton2.Name = "materialFlatButton2";
-            this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(72, 36);
-            this.materialFlatButton2.TabIndex = 13;
-            this.materialFlatButton2.Text = "Peruuta";
-            this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.btnPeruuta.AutoSize = true;
+            this.btnPeruuta.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPeruuta.Depth = 0;
+            this.btnPeruuta.Location = new System.Drawing.Point(669, 476);
+            this.btnPeruuta.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPeruuta.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPeruuta.Name = "btnPeruuta";
+            this.btnPeruuta.Primary = false;
+            this.btnPeruuta.Size = new System.Drawing.Size(72, 36);
+            this.btnPeruuta.TabIndex = 13;
+            this.btnPeruuta.Text = "Peruuta";
+            this.btnPeruuta.UseVisualStyleBackColor = true;
             // 
-            // materialFlatButton3
+            // btnMuokkaa
             // 
-            this.materialFlatButton3.AutoSize = true;
-            this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton3.Depth = 0;
-            this.materialFlatButton3.Location = new System.Drawing.Point(583, 476);
-            this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton3.Name = "materialFlatButton3";
-            this.materialFlatButton3.Primary = false;
-            this.materialFlatButton3.Size = new System.Drawing.Size(78, 36);
-            this.materialFlatButton3.TabIndex = 14;
-            this.materialFlatButton3.Text = "Muokkaa";
-            this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.btnMuokkaa.AutoSize = true;
+            this.btnMuokkaa.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMuokkaa.Depth = 0;
+            this.btnMuokkaa.Location = new System.Drawing.Point(583, 476);
+            this.btnMuokkaa.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnMuokkaa.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnMuokkaa.Name = "btnMuokkaa";
+            this.btnMuokkaa.Primary = false;
+            this.btnMuokkaa.Size = new System.Drawing.Size(78, 36);
+            this.btnMuokkaa.TabIndex = 14;
+            this.btnMuokkaa.Text = "Muokkaa";
+            this.btnMuokkaa.UseVisualStyleBackColor = true;
             // 
-            // materialFlatButton4
+            // btnUusi
             // 
-            this.materialFlatButton4.AutoSize = true;
-            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton4.Depth = 0;
-            this.materialFlatButton4.Location = new System.Drawing.Point(533, 476);
-            this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton4.Name = "materialFlatButton4";
-            this.materialFlatButton4.Primary = false;
-            this.materialFlatButton4.Size = new System.Drawing.Size(42, 36);
-            this.materialFlatButton4.TabIndex = 15;
-            this.materialFlatButton4.Text = "Uusi";
-            this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.btnUusi.AutoSize = true;
+            this.btnUusi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnUusi.Depth = 0;
+            this.btnUusi.Location = new System.Drawing.Point(533, 476);
+            this.btnUusi.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnUusi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnUusi.Name = "btnUusi";
+            this.btnUusi.Primary = false;
+            this.btnUusi.Size = new System.Drawing.Size(42, 36);
+            this.btnUusi.TabIndex = 15;
+            this.btnUusi.Text = "Uusi";
+            this.btnUusi.UseVisualStyleBackColor = true;
+            // 
+            // appData
+            // 
+            this.appData.DataSetName = "AppData";
+            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // appDataBindingSource
+            // 
+            this.appDataBindingSource.DataSource = this.appData;
+            this.appDataBindingSource.Position = 0;
+            // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.appData;
+            // 
+            // tableTableAdapter
+            // 
+            this.tableTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // työnNimiDataGridViewTextBoxColumn
+            // 
+            this.työnNimiDataGridViewTextBoxColumn.DataPropertyName = "Työn nimi";
+            this.työnNimiDataGridViewTextBoxColumn.HeaderText = "Työn nimi";
+            this.työnNimiDataGridViewTextBoxColumn.Name = "työnNimiDataGridViewTextBoxColumn";
+            this.työnNimiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // kenelleDataGridViewTextBoxColumn
+            // 
+            this.kenelleDataGridViewTextBoxColumn.DataPropertyName = "Kenelle";
+            this.kenelleDataGridViewTextBoxColumn.HeaderText = "Kenelle";
+            this.kenelleDataGridViewTextBoxColumn.Name = "kenelleDataGridViewTextBoxColumn";
+            this.kenelleDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // materiaaliDataGridViewTextBoxColumn
+            // 
+            this.materiaaliDataGridViewTextBoxColumn.DataPropertyName = "Materiaali";
+            this.materiaaliDataGridViewTextBoxColumn.HeaderText = "Materiaali";
+            this.materiaaliDataGridViewTextBoxColumn.Name = "materiaaliDataGridViewTextBoxColumn";
+            this.materiaaliDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // kuvausDataGridViewTextBoxColumn
+            // 
+            this.kuvausDataGridViewTextBoxColumn.DataPropertyName = "Kuvaus";
+            this.kuvausDataGridViewTextBoxColumn.HeaderText = "Kuvaus";
+            this.kuvausDataGridViewTextBoxColumn.Name = "kuvausDataGridViewTextBoxColumn";
+            this.kuvausDataGridViewTextBoxColumn.Width = 150;
             // 
             // KnittingDiary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 517);
-            this.Controls.Add(this.materialFlatButton4);
-            this.Controls.Add(this.materialFlatButton3);
-            this.Controls.Add(this.materialFlatButton2);
-            this.Controls.Add(this.materialFlatButton1);
+            this.Controls.Add(this.btnUusi);
+            this.Controls.Add(this.btnMuokkaa);
+            this.Controls.Add(this.btnPeruuta);
+            this.Controls.Add(this.btnTallenna);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtEtsi);
             this.Controls.Add(this.materialLabel5);
@@ -278,6 +353,9 @@
             this.Text = "KnittingDiary";
             this.Load += new System.EventHandler(this.KnittingDiary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appDataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,10 +373,19 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtEtsi;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
+        private MaterialSkin.Controls.MaterialFlatButton btnTallenna;
+        private MaterialSkin.Controls.MaterialFlatButton btnPeruuta;
+        private MaterialSkin.Controls.MaterialFlatButton btnMuokkaa;
+        private MaterialSkin.Controls.MaterialFlatButton btnUusi;
+        private AppData appData;
+        private System.Windows.Forms.BindingSource appDataBindingSource;
+        private System.Windows.Forms.BindingSource tableBindingSource;
+        private AppDataTableAdapters.TableTableAdapter tableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn työnNimiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kenelleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn materiaaliDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kuvausDataGridViewTextBoxColumn;
     }
 }
 

@@ -19,6 +19,8 @@ namespace KnittingDiary2
 
         private void KnittingDiary_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'appData.Table' table. You can move, or remove it, as needed.
+            this.tableTableAdapter.Fill(this.appData.Table);
 
         }
     }
