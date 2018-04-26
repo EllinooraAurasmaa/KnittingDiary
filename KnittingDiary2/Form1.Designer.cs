@@ -28,34 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtTyönnimi = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtKenelle = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtKuvaus = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtEtsi = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(548, 72);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 169);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // materialLabel1
             // 
@@ -70,37 +59,35 @@
             this.materialLabel1.TabIndex = 1;
             this.materialLabel1.Text = "Työn nimi:";
             // 
-            // materialSingleLineTextField1
+            // txtTyönnimi
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(155, 94);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(254, 23);
-            this.materialSingleLineTextField1.TabIndex = 2;
-            this.materialSingleLineTextField1.Text = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.txtTyönnimi.Depth = 0;
+            this.txtTyönnimi.Hint = "";
+            this.txtTyönnimi.Location = new System.Drawing.Point(155, 94);
+            this.txtTyönnimi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtTyönnimi.Name = "txtTyönnimi";
+            this.txtTyönnimi.PasswordChar = '\0';
+            this.txtTyönnimi.SelectedText = "";
+            this.txtTyönnimi.SelectionLength = 0;
+            this.txtTyönnimi.SelectionStart = 0;
+            this.txtTyönnimi.Size = new System.Drawing.Size(420, 23);
+            this.txtTyönnimi.TabIndex = 2;
+            this.txtTyönnimi.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField2
+            // txtKenelle
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(155, 123);
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(254, 23);
-            this.materialSingleLineTextField2.TabIndex = 4;
-            this.materialSingleLineTextField2.Text = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.txtKenelle.Depth = 0;
+            this.txtKenelle.Hint = "";
+            this.txtKenelle.Location = new System.Drawing.Point(155, 123);
+            this.txtKenelle.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtKenelle.Name = "txtKenelle";
+            this.txtKenelle.PasswordChar = '\0';
+            this.txtKenelle.SelectedText = "";
+            this.txtKenelle.SelectionLength = 0;
+            this.txtKenelle.SelectionStart = 0;
+            this.txtKenelle.Size = new System.Drawing.Size(420, 23);
+            this.txtKenelle.TabIndex = 4;
+            this.txtKenelle.UseSystemPasswordChar = false;
             // 
             // materialLabel2
             // 
@@ -115,21 +102,20 @@
             this.materialLabel2.TabIndex = 3;
             this.materialLabel2.Text = "Kenelle:";
             // 
-            // materialSingleLineTextField3
+            // txtKuvaus
             // 
-            this.materialSingleLineTextField3.Depth = 0;
-            this.materialSingleLineTextField3.Hint = "";
-            this.materialSingleLineTextField3.Location = new System.Drawing.Point(155, 153);
-            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.PasswordChar = '\0';
-            this.materialSingleLineTextField3.SelectedText = "";
-            this.materialSingleLineTextField3.SelectionLength = 0;
-            this.materialSingleLineTextField3.SelectionStart = 0;
-            this.materialSingleLineTextField3.Size = new System.Drawing.Size(254, 23);
-            this.materialSingleLineTextField3.TabIndex = 6;
-            this.materialSingleLineTextField3.Text = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
+            this.txtKuvaus.Depth = 0;
+            this.txtKuvaus.Hint = "";
+            this.txtKuvaus.Location = new System.Drawing.Point(155, 153);
+            this.txtKuvaus.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtKuvaus.Name = "txtKuvaus";
+            this.txtKuvaus.PasswordChar = '\0';
+            this.txtKuvaus.SelectedText = "";
+            this.txtKuvaus.SelectionLength = 0;
+            this.txtKuvaus.SelectionStart = 0;
+            this.txtKuvaus.Size = new System.Drawing.Size(420, 23);
+            this.txtKuvaus.TabIndex = 6;
+            this.txtKuvaus.UseSystemPasswordChar = false;
             // 
             // materialLabel3
             // 
@@ -155,9 +141,8 @@
             this.materialSingleLineTextField4.SelectedText = "";
             this.materialSingleLineTextField4.SelectionLength = 0;
             this.materialSingleLineTextField4.SelectionStart = 0;
-            this.materialSingleLineTextField4.Size = new System.Drawing.Size(254, 23);
+            this.materialSingleLineTextField4.Size = new System.Drawing.Size(420, 23);
             this.materialSingleLineTextField4.TabIndex = 8;
-            this.materialSingleLineTextField4.Text = "materialSingleLineTextField4";
             this.materialSingleLineTextField4.UseSystemPasswordChar = false;
             // 
             // materialLabel4
@@ -169,25 +154,24 @@
             this.materialLabel4.Location = new System.Drawing.Point(41, 184);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(45, 19);
+            this.materialLabel4.Size = new System.Drawing.Size(61, 19);
             this.materialLabel4.TabIndex = 7;
-            this.materialLabel4.Text = "Kuva:";
+            this.materialLabel4.Text = "Kuvaus:";
             // 
-            // materialSingleLineTextField5
+            // txtEtsi
             // 
-            this.materialSingleLineTextField5.Depth = 0;
-            this.materialSingleLineTextField5.Hint = "";
-            this.materialSingleLineTextField5.Location = new System.Drawing.Point(155, 218);
-            this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
-            this.materialSingleLineTextField5.PasswordChar = '\0';
-            this.materialSingleLineTextField5.SelectedText = "";
-            this.materialSingleLineTextField5.SelectionLength = 0;
-            this.materialSingleLineTextField5.SelectionStart = 0;
-            this.materialSingleLineTextField5.Size = new System.Drawing.Size(254, 23);
-            this.materialSingleLineTextField5.TabIndex = 10;
-            this.materialSingleLineTextField5.Text = "materialSingleLineTextField5";
-            this.materialSingleLineTextField5.UseSystemPasswordChar = false;
+            this.txtEtsi.Depth = 0;
+            this.txtEtsi.Hint = "";
+            this.txtEtsi.Location = new System.Drawing.Point(155, 218);
+            this.txtEtsi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtEtsi.Name = "txtEtsi";
+            this.txtEtsi.PasswordChar = '\0';
+            this.txtEtsi.SelectedText = "";
+            this.txtEtsi.SelectionLength = 0;
+            this.txtEtsi.SelectionStart = 0;
+            this.txtEtsi.Size = new System.Drawing.Size(517, 23);
+            this.txtEtsi.TabIndex = 10;
+            this.txtEtsi.UseSystemPasswordChar = false;
             // 
             // materialLabel5
             // 
@@ -270,41 +254,29 @@
             this.materialFlatButton4.Text = "Uusi";
             this.materialFlatButton4.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(377, 482);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // KnittingDiary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 517);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.materialFlatButton4);
             this.Controls.Add(this.materialFlatButton3);
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.materialSingleLineTextField5);
+            this.Controls.Add(this.txtEtsi);
             this.Controls.Add(this.materialLabel5);
             this.Controls.Add(this.materialSingleLineTextField4);
             this.Controls.Add(this.materialLabel4);
-            this.Controls.Add(this.materialSingleLineTextField3);
+            this.Controls.Add(this.txtKuvaus);
             this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialSingleLineTextField2);
+            this.Controls.Add(this.txtKenelle);
             this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.Controls.Add(this.txtTyönnimi);
             this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "KnittingDiary";
             this.Text = "KnittingDiary";
             this.Load += new System.EventHandler(this.KnittingDiary_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -312,24 +284,21 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtTyönnimi;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtKenelle;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtKuvaus;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtEtsi;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
-        private System.Windows.Forms.Button button1;
     }
 }
 
