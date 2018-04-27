@@ -399,10 +399,10 @@ namespace KnittingDiary2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TableRow AddTableRow(int Id, string Työn_nimi, string Kenelle, string Materiaali, string Kuvaus) {
+            public TableRow AddTableRow(string Työn_nimi, string Kenelle, string Materiaali, string Kuvaus) {
                 TableRow rowTableRow = ((TableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
+                        null,
                         Työn_nimi,
                         Kenelle,
                         Materiaali,
@@ -458,6 +458,7 @@ namespace KnittingDiary2 {
                 base.Columns.Add(this.columnKuvaus);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
+                this.columnId.AutoIncrement = true;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnTyön_nimi.MaxLength = 50;

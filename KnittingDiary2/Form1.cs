@@ -26,7 +26,7 @@ namespace KnittingDiary2
         private void KnittingDiary_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'appData.Table' table. You can move, or remove it, as needed.
-           // this.tableTableAdapter.Fill(this.appData.Table);
+           this.tableTableAdapter.Fill(this.appData.Table);
             Muokkaa(false);
         }
         private void Muokkaa(bool value)
@@ -34,7 +34,7 @@ namespace KnittingDiary2
         {
             txtTyönnimi.Enabled = value;
             txtKenelle.Enabled = value;
-            txtMateriaali.Enabled = value;
+            txtKuvaus.Enabled = value;
             txtMateriaali.Enabled = value;
 
         }
@@ -81,7 +81,7 @@ namespace KnittingDiary2
                 tableTableAdapter.Update(appData.Table);
                 dataGridView1.Refresh();
                 txtTyönnimi.Focus();
-                MessageBox.Show("Käsi työ on tallennettu onnistuneesti.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Käsityö on tallennettu onnistuneesti.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
@@ -121,10 +121,15 @@ namespace KnittingDiary2
             {
                 string searchValue = txtEtsi.Text;
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                tableBindingSource.Filter = string.Format("{0} = '{1}'", "Työnnimi", searchValue);
+                tableBindingSource.Filter = string.Format("{0}  ", "Työn nimi", searchValue);
                 //here you can do selection if you need
 
             }
+        }
+
+        private void txtTyönnimi_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
