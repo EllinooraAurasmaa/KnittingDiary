@@ -1019,8 +1019,13 @@ SELECT Id, [Työn nimi], Kenelle, Materiaali, Kuvaus FROM [Table] WHERE (Id = @I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Työn_nimi, string Original_Kenelle, string Original_Materiaali, string Original_Kuvaus) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+        public virtual int Delete(global::System.Nullable<int> Original_Id, string Original_Työn_nimi, string Original_Kenelle, string Original_Materiaali, string Original_Kuvaus) {
+            if ((Original_Id.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((Original_Työn_nimi == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -1073,8 +1078,13 @@ SELECT Id, [Työn nimi], Kenelle, Materiaali, Kuvaus FROM [Table] WHERE (Id = @I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string Työn_nimi, string Kenelle, string Materiaali, string Kuvaus) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
+        public virtual int Insert(global::System.Nullable<int> Id, string Työn_nimi, string Kenelle, string Materiaali, string Kuvaus) {
+            if ((Id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((Työn_nimi == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -1119,8 +1129,13 @@ SELECT Id, [Työn nimi], Kenelle, Materiaali, Kuvaus FROM [Table] WHERE (Id = @I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, string Työn_nimi, string Kenelle, string Materiaali, string Kuvaus, int Original_Id, string Original_Työn_nimi, string Original_Kenelle, string Original_Materiaali, string Original_Kuvaus) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
+        public virtual int Update(global::System.Nullable<int> Id, string Työn_nimi, string Kenelle, string Materiaali, string Kuvaus, global::System.Nullable<int> Original_Id, string Original_Työn_nimi, string Original_Kenelle, string Original_Materiaali, string Original_Kuvaus) {
+            if ((Id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((Työn_nimi == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -1145,7 +1160,12 @@ SELECT Id, [Työn nimi], Kenelle, Materiaali, Kuvaus FROM [Table] WHERE (Id = @I
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Kuvaus));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Id));
+            if ((Original_Id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             if ((Original_Työn_nimi == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
@@ -1198,7 +1218,7 @@ SELECT Id, [Työn nimi], Kenelle, Materiaali, Kuvaus FROM [Table] WHERE (Id = @I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Työn_nimi, string Kenelle, string Materiaali, string Kuvaus, int Original_Id, string Original_Työn_nimi, string Original_Kenelle, string Original_Materiaali, string Original_Kuvaus) {
+        public virtual int Update(string Työn_nimi, string Kenelle, string Materiaali, string Kuvaus, global::System.Nullable<int> Original_Id, string Original_Työn_nimi, string Original_Kenelle, string Original_Materiaali, string Original_Kuvaus) {
             return this.Update(Original_Id, Työn_nimi, Kenelle, Materiaali, Kuvaus, Original_Id, Original_Työn_nimi, Original_Kenelle, Original_Materiaali, Original_Kuvaus);
         }
     }

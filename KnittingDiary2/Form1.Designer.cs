@@ -33,9 +33,9 @@
             this.txtTyönnimi = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtKenelle = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtKuvaus = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtMateriaali = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtKuvaus = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.txtEtsi = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
@@ -44,36 +44,38 @@
             this.btnPeruuta = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnMuokkaa = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnUusi = new MaterialSkin.Controls.MaterialFlatButton();
-            this.appData = new KnittingDiary2.AppData();
-            this.appDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tableTableAdapter = new KnittingDiary2.AppDataTableAdapters.TableTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.työnNimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kenelleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materiaaliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kuvausDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.appData = new KnittingDiary2.AppData();
+            this.appDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableTableAdapter = new KnittingDiary2.AppDataTableAdapters.TableTableAdapter();
+            this.btnEtsi = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appDataBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(41, 94);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(79, 19);
-            this.materialLabel1.TabIndex = 1;
+            this.materialLabel1.Size = new System.Drawing.Size(76, 18);
+            this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Työn nimi:";
             // 
             // txtTyönnimi
             // 
+            this.txtTyönnimi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Työn nimi", true));
             this.txtTyönnimi.Depth = 0;
             this.txtTyönnimi.Hint = "";
             this.txtTyönnimi.Location = new System.Drawing.Point(155, 94);
@@ -84,11 +86,12 @@
             this.txtTyönnimi.SelectionLength = 0;
             this.txtTyönnimi.SelectionStart = 0;
             this.txtTyönnimi.Size = new System.Drawing.Size(420, 23);
-            this.txtTyönnimi.TabIndex = 2;
+            this.txtTyönnimi.TabIndex = 0;
             this.txtTyönnimi.UseSystemPasswordChar = false;
             // 
             // txtKenelle
             // 
+            this.txtKenelle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Kenelle", true));
             this.txtKenelle.Depth = 0;
             this.txtKenelle.Hint = "";
             this.txtKenelle.Location = new System.Drawing.Point(155, 123);
@@ -99,27 +102,57 @@
             this.txtKenelle.SelectionLength = 0;
             this.txtKenelle.SelectionStart = 0;
             this.txtKenelle.Size = new System.Drawing.Size(420, 23);
-            this.txtKenelle.TabIndex = 4;
+            this.txtKenelle.TabIndex = 1;
             this.txtKenelle.UseSystemPasswordChar = false;
             // 
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(41, 123);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(62, 19);
-            this.materialLabel2.TabIndex = 3;
+            this.materialLabel2.Size = new System.Drawing.Size(60, 18);
+            this.materialLabel2.TabIndex = 0;
             this.materialLabel2.Text = "Kenelle:";
+            // 
+            // txtMateriaali
+            // 
+            this.txtMateriaali.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Materiaali", true));
+            this.txtMateriaali.Depth = 0;
+            this.txtMateriaali.Hint = "";
+            this.txtMateriaali.Location = new System.Drawing.Point(155, 153);
+            this.txtMateriaali.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtMateriaali.Name = "txtMateriaali";
+            this.txtMateriaali.PasswordChar = '\0';
+            this.txtMateriaali.SelectedText = "";
+            this.txtMateriaali.SelectionLength = 0;
+            this.txtMateriaali.SelectionStart = 0;
+            this.txtMateriaali.Size = new System.Drawing.Size(420, 23);
+            this.txtMateriaali.TabIndex = 2;
+            this.txtMateriaali.UseSystemPasswordChar = false;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(41, 153);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(75, 18);
+            this.materialLabel3.TabIndex = 0;
+            this.materialLabel3.Text = "Materiaali:";
             // 
             // txtKuvaus
             // 
+            this.txtKuvaus.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Kuvaus", true));
             this.txtKuvaus.Depth = 0;
             this.txtKuvaus.Hint = "";
-            this.txtKuvaus.Location = new System.Drawing.Point(155, 153);
+            this.txtKuvaus.Location = new System.Drawing.Point(155, 184);
             this.txtKuvaus.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtKuvaus.Name = "txtKuvaus";
             this.txtKuvaus.PasswordChar = '\0';
@@ -127,48 +160,20 @@
             this.txtKuvaus.SelectionLength = 0;
             this.txtKuvaus.SelectionStart = 0;
             this.txtKuvaus.Size = new System.Drawing.Size(420, 23);
-            this.txtKuvaus.TabIndex = 6;
+            this.txtKuvaus.TabIndex = 3;
             this.txtKuvaus.UseSystemPasswordChar = false;
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(41, 153);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(80, 19);
-            this.materialLabel3.TabIndex = 5;
-            this.materialLabel3.Text = "Materiaali:";
-            // 
-            // materialSingleLineTextField4
-            // 
-            this.materialSingleLineTextField4.Depth = 0;
-            this.materialSingleLineTextField4.Hint = "";
-            this.materialSingleLineTextField4.Location = new System.Drawing.Point(155, 184);
-            this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
-            this.materialSingleLineTextField4.PasswordChar = '\0';
-            this.materialSingleLineTextField4.SelectedText = "";
-            this.materialSingleLineTextField4.SelectionLength = 0;
-            this.materialSingleLineTextField4.SelectionStart = 0;
-            this.materialSingleLineTextField4.Size = new System.Drawing.Size(420, 23);
-            this.materialSingleLineTextField4.TabIndex = 8;
-            this.materialSingleLineTextField4.UseSystemPasswordChar = false;
             // 
             // materialLabel4
             // 
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel4.Location = new System.Drawing.Point(41, 184);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(61, 19);
-            this.materialLabel4.TabIndex = 7;
+            this.materialLabel4.Size = new System.Drawing.Size(61, 18);
+            this.materialLabel4.TabIndex = 0;
             this.materialLabel4.Text = "Kuvaus:";
             // 
             // txtEtsi
@@ -183,20 +188,21 @@
             this.txtEtsi.SelectionLength = 0;
             this.txtEtsi.SelectionStart = 0;
             this.txtEtsi.Size = new System.Drawing.Size(517, 23);
-            this.txtEtsi.TabIndex = 10;
+            this.txtEtsi.TabIndex = 4;
             this.txtEtsi.UseSystemPasswordChar = false;
+            this.txtEtsi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEtsi_KeyDown);
             // 
             // materialLabel5
             // 
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel5.Location = new System.Drawing.Point(41, 218);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(39, 19);
-            this.materialLabel5.TabIndex = 9;
+            this.materialLabel5.Size = new System.Drawing.Size(37, 18);
+            this.materialLabel5.TabIndex = 0;
             this.materialLabel5.Text = "Etsi:";
             // 
             // dataGridView1
@@ -213,7 +219,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(45, 263);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(769, 204);
-            this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
             // 
             // btnTallenna
             // 
@@ -226,9 +233,10 @@
             this.btnTallenna.Name = "btnTallenna";
             this.btnTallenna.Primary = false;
             this.btnTallenna.Size = new System.Drawing.Size(81, 36);
-            this.btnTallenna.TabIndex = 12;
+            this.btnTallenna.TabIndex = 8;
             this.btnTallenna.Text = "Tallenna";
             this.btnTallenna.UseVisualStyleBackColor = true;
+            this.btnTallenna.Click += new System.EventHandler(this.btnTallenna_Click);
             // 
             // btnPeruuta
             // 
@@ -241,9 +249,10 @@
             this.btnPeruuta.Name = "btnPeruuta";
             this.btnPeruuta.Primary = false;
             this.btnPeruuta.Size = new System.Drawing.Size(72, 36);
-            this.btnPeruuta.TabIndex = 13;
+            this.btnPeruuta.TabIndex = 7;
             this.btnPeruuta.Text = "Peruuta";
             this.btnPeruuta.UseVisualStyleBackColor = true;
+            this.btnPeruuta.Click += new System.EventHandler(this.btnPeruuta_Click);
             // 
             // btnMuokkaa
             // 
@@ -256,9 +265,10 @@
             this.btnMuokkaa.Name = "btnMuokkaa";
             this.btnMuokkaa.Primary = false;
             this.btnMuokkaa.Size = new System.Drawing.Size(78, 36);
-            this.btnMuokkaa.TabIndex = 14;
+            this.btnMuokkaa.TabIndex = 6;
             this.btnMuokkaa.Text = "Muokkaa";
             this.btnMuokkaa.UseVisualStyleBackColor = true;
+            this.btnMuokkaa.Click += new System.EventHandler(this.btnMuokkaa_Click);
             // 
             // btnUusi
             // 
@@ -271,28 +281,10 @@
             this.btnUusi.Name = "btnUusi";
             this.btnUusi.Primary = false;
             this.btnUusi.Size = new System.Drawing.Size(42, 36);
-            this.btnUusi.TabIndex = 15;
+            this.btnUusi.TabIndex = 5;
             this.btnUusi.Text = "Uusi";
             this.btnUusi.UseVisualStyleBackColor = true;
-            // 
-            // appData
-            // 
-            this.appData.DataSetName = "AppData";
-            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // appDataBindingSource
-            // 
-            this.appDataBindingSource.DataSource = this.appData;
-            this.appDataBindingSource.Position = 0;
-            // 
-            // tableBindingSource
-            // 
-            this.tableBindingSource.DataMember = "Table";
-            this.tableBindingSource.DataSource = this.appData;
-            // 
-            // tableTableAdapter
-            // 
-            this.tableTableAdapter.ClearBeforeFill = true;
+            this.btnUusi.Click += new System.EventHandler(this.btnUusi_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -329,11 +321,47 @@
             this.kuvausDataGridViewTextBoxColumn.Name = "kuvausDataGridViewTextBoxColumn";
             this.kuvausDataGridViewTextBoxColumn.Width = 150;
             // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.appData;
+            // 
+            // appData
+            // 
+            this.appData.DataSetName = "AppData";
+            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // appDataBindingSource
+            // 
+            this.appDataBindingSource.DataSource = this.appData;
+            this.appDataBindingSource.Position = 0;
+            // 
+            // tableTableAdapter
+            // 
+            this.tableTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnEtsi
+            // 
+            this.btnEtsi.AutoSize = true;
+            this.btnEtsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEtsi.Depth = 0;
+            this.btnEtsi.Location = new System.Drawing.Point(679, 218);
+            this.btnEtsi.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEtsi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEtsi.Name = "btnEtsi";
+            this.btnEtsi.Primary = false;
+            this.btnEtsi.Size = new System.Drawing.Size(40, 36);
+            this.btnEtsi.TabIndex = 9;
+            this.btnEtsi.Text = "Etsi";
+            this.btnEtsi.UseVisualStyleBackColor = true;
+            this.btnEtsi.Click += new System.EventHandler(this.btnEtsi_Click);
+            // 
             // KnittingDiary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 517);
+            this.Controls.Add(this.btnEtsi);
             this.Controls.Add(this.btnUusi);
             this.Controls.Add(this.btnMuokkaa);
             this.Controls.Add(this.btnPeruuta);
@@ -341,9 +369,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtEtsi);
             this.Controls.Add(this.materialLabel5);
-            this.Controls.Add(this.materialSingleLineTextField4);
-            this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.txtKuvaus);
+            this.Controls.Add(this.materialLabel4);
+            this.Controls.Add(this.txtMateriaali);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.txtKenelle);
             this.Controls.Add(this.materialLabel2);
@@ -353,9 +381,9 @@
             this.Text = "KnittingDiary";
             this.Load += new System.EventHandler(this.KnittingDiary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appDataBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,9 +394,9 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtTyönnimi;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtKenelle;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtKuvaus;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtMateriaali;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtKuvaus;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtEtsi;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
@@ -386,6 +414,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kenelleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn materiaaliDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kuvausDataGridViewTextBoxColumn;
+        private MaterialSkin.Controls.MaterialFlatButton btnEtsi;
     }
 }
 
