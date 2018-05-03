@@ -82,9 +82,6 @@ namespace KnittingDiary2
                 dataGridView1.Refresh();
                 txtTyönnimi.Focus();
                 MessageBox.Show("Käsityö on tallennettu onnistuneesti.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
             }
 
             catch (Exception ex)
@@ -130,6 +127,6 @@ namespace KnittingDiary2
         private void txtTyönnimi_Click(object sender, EventArgs e)
         {
 
-        }
+       }
     }
 }
