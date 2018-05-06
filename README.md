@@ -11,16 +11,17 @@ Ohjelman tarkoituksena on, että käyttäjä voi tallentaa muistiin tekemänsä 
 3. Kuvaruutukaappaukset tärkeimmistä käyttöliittymistä + lyhyet käyttöohjeet jollei "ilmiselvää"
 <a href="https://ibb.co/dTX6R7"><img src="https://preview.ibb.co/jkuaKS/c9816e2f_857d_4455_953f_a31620f8ad1a_1.jpg" alt="c9816e2f_857d_4455_953f_a31620f8ad1a_1" border="0"></a>
 
+
 Ohjelman käyttä on ilmiselvää, eikä tarvitse erityisiä ohjeita.
 
 4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat
 Mukana tulee Local Database "table". Kyseinen Database sisältää solut: id, työnnimi, kenelle, materiaali ja kuvaus.
 
 5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat
-Tällä hetkellä Etsi-toiminto ei toimi halutulla tavalla. Tämän korjaaminen on myös kehitysidea.
+Tällä hetkellä Etsi-toiminto ei toimi halutulla tavalla. Tämän korjaaminen on myös kehitysidea. Lisäksi ilmeni tallentamisessa ongelma. Tätä ei ehditty korjaamaan. 
 
 6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
-Suurin haaste oli databasen käyttäminen. Monulla ei ole ennestään paljoa kokemusta tietokannoista. Id-tuotti eniten haastavuutta, mutta kysyttyäni apua opettajalta ongelma ratkesi.
+Suurin haaste oli databasen käyttäminen. Monulla ei ole ennestään paljoa kokemusta tietokannoista. Id-tuotti eniten haastavuutta, mutta kysyttyäni apua opettajalta ongelma ratkesi. Opin jonkin verran C# ja tietokannan käyttöä. 
 
 7. Tekijät, vastuiden ja työmäärän jakautuminen
 Tekijä: Ellinoora Aurasmaa
